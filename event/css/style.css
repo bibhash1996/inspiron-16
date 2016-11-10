@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
+
+@import url('https://fonts.googleapis.com/css?family=Cuprum');
+*, *:before, *:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+h1, h2 {
+    margin: 0;
+
+}
+.cross{
+	top:25px;
+	right:40px;
+	font-size:60px;
+	position:absolute;
+	z-index:10;
+	text-decoration:none !important ;
+}
+@media screen and (max-width:450px)
+{
+	.cross{
+		top:2px;
+		right:15px;
+		font-size:40px;
+	}
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans';
+  overflow-y:hidden;
+  background-color: black;
+}
+body a
+{
+  text-decoration: none;
+}
+body a:hover
+{
+  text-decoration: none;
+}
+
+/* Panels Width */
+[class*='col-'] {
+    float: left;
+}
+.col-1-5 {
+    width: calc(100% / 2);
+    display: inline-block;
+
+}
+.glyphicon
+{
+  font-size: 3em;
+}
+.glyphicon:hover
+{
+  transform: rotateX(180deg);
+}
+/* Side Bar */
+
+/* Sliding Panels */
+.sliding-panels {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  display: inline-block;
+  text-align:center;
+  -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.sliding-panels:hover {
+  text-decoration: none;
+}
+.title {
+  text-align: center;
+  padding: 15% 5%;
+  font-weight: 300;
+  margin-top: 25%;
+  text-decoration: none;
+  font-size: 5em;
+   font-family: 'Oswald';
+    font-style: bold;
+ 
+    
+
+
+}
+.title:hover
+{
+  text-decoration: none;
+}
+a:hover
+{
+  text-decoration:none;
+}
+.panel1 {
+  left: 0%;
+  background-color: #000000;
+ color:  #1F7872;
+  display: inline-block;
+  border-right: 2px solid #1F7872; 
+}
+.panel1:hover,not:hover
+{ cursor: pointer;
+  color: #1F7872;
+}
+
+.panel2 {
+  right: 0%;
+  background-color: #1F7872;
+  color:  #000000;
+  display: inline-block;
+  border-left: 2px solid black;
+}
+.panel2:hover,not:hover
+{ cursor: pointer;
+  color: black;
+}
+
+.panel-active {
+   width: 25%;
+  text-decoration: none;
+}
+.panel-push-left {
+  left: -50%;
+
+}
+.panel-push-right {
+ left: 100%;
+}
+
+.event1
+{
+width: 75%;
+height: 50em;
+background-color: black;
+float: right;
+overflow: auto;
+
+}
+.columns {
+  column-width: 75%;
+  width: 100%;
+ overflow-y: hidden;
+  float: center;
+  text-align:center;
+
+ 
+ 
+}
+.columns figure{
+ display: inline-block;
+  height: 13.3em;
+  width: 33%;
+  border-radius: 2%;
+margin-top: 2%;
+padding: 4%;
+  column-break-inside: avoid;
+
+}
+figure:hover
+{
+  background-color: #212121;
+  cursor: pointer;
+
+}
+figure h3
+{
+  margin-top: 15%;
+  color: #1F7872;
+  text-decoration: none;
+  font-family: 'Merriweather';
+  font-style: bold;
+}
+.event2 figure h3
+{
+  color:black;
+}
+figure a:hover
+{
+  text-decoration:none;
+}
+.event2
+{
+ width: 75%;
+height: 70em;
+background-color: #1F7872;
+float: left; 
+overflow:auto;
+}
+
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    
+    top: 0;
+    background-color: #1F7872;/* Black fallback color */
+    opacity:1;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 5%; /* 25% from the top */
+    width: 95%; /* 100% width */
+    text-align: center; 
+    font-size: 1em;
+    margin: 2em;
+    padding: 2%;
+    overflow-x:hidden;
+    float: center;
+    color:#DEDBA7;
+
+    
+}
+.overlay-content h1,.overlay-content2 h1
+{
+  font-family: 'Cuprum';
+  font-style: bold;
+  font-size: 3.5em;
+  margin-top: 1%;
+}
+
+
+.overlay-content h3,.overlay-content h2, .overlay-content p,.overlay-content2 h2,.overlay-content2 h3,.overlay-content2 p
+{
+  font-family: 'Fjalla One';
+  }
+.overlay-content p,.overlay-content2 p
+{
+  font-size: 1.5em;
+}
+.cont
+{ margin-top: -5%;
+  margin-left: 3em;
+  float: left;
+  text-align: left;
+  display: inline-block;
+}
+
+.fees
+{
+  font-family: 'Fjalla One';
+  text-align: right;
+  margin-right: 2em;
+  float: right;
+}
+
+
+.overlay .closebtn{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    font-size: 4em;
+    color:#DEDBA7;
+    text-decoration: none;
+}
+.overlay .closebtn:hover{
+  cursor: pointer;
+}
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+        .fees
+        {
+          text-align: left;
+        }
+    
+}
+
+.overlay2 {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+  
+    top: 0;
+    float: right;
+    background-color: #000000; /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+.overlay2 .closebtn
+{
+  position: absolute;
+  
+    right: 10%;
+    font-size: 4em;
+    color:#DEDBA7;
+    text-decoration: none;
+    margin-top: 30px; 
+}
+.cls
+{
+  width: 7%;
+  height: 6%;
+  text-align: center;
+  padding-bottom: 6%;
+}
+.cls:hover
+{
+  cursor: pointer;
+}
+
+.overlay-content2 {
+    position: relative;
+    top: 3%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; 
+    font-size: 1em;
+    padding-left: 5%;
+    overflow-x:hidden;
+    margin-top: 30px;
+    color:#F58723;
+    padding: 2%;
+    float: center;
+    color: #DEDBA7;
+    
+}
+.event2 figure:hover
+{
+  background-color: #72B095;
+}
